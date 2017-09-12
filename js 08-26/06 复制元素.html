@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="box1">
+			<p>此时不努力 更待何时</p>
+		</div>
+		<div class="box2">
+			
+		</div>
+		
+		<script type="text/javascript">
+			var p = document.getElementsByTagName("p")[0];
+			
+			var pclone = p.cloneNode()//无参数 --表示浅层复制，只复制元素本身
+			var pclone2 = p.cloneNode(true)//有参数 --表示深层复制，元素以及其子元素全部被复制
+			
+			var box2 = document.getElementsByClassName("box2")[0];
+			//追加新创建的元素或页面中已存在的元素时，会将原有的元素移走添加到指定地方
+			box2.appendChild(p)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+DOM的节点的操作：
+	1 创建元素
+		方式一： document.write()
+		方式二： 元素.innerHTML
+		方式三：document.createElement("div")
+				
+	2 追加元素
+		父亲.appendChild
+		父亲.insertBefore(儿子，参考)
+	3 删除元素
+	removeChild() 
+	
+	4 复制元素
+			appendChild追加新创建的元素或页面中已存在的元素时，会将原有的元素移走添加到指定地方
+			
+		cloneNode:  无参数 --表示浅层复制，只复制元素本身
+		cloneNode(true)  有参数 --表示深层复制，元素以及其子元素全部被复制
+	
+	
+	
+		 	

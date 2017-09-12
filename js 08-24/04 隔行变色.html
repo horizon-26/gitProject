@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>隔行变色</title>
+		<style type="text/css">
+			.odd{
+				background-color:red;
+			}
+			.even{
+				background-color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>aaa</li>
+			<li>bbb</li>
+			<li>ccc</li>
+			<li>ddd</li>
+			
+		</ul>
+		<script type="text/javascript">
+			var ul = document.getElementsByTagName("ul")[0];
+			var lis = ul.children;
+			for(var i=0;i<lis.length;i++){
+				if(i%2 == 0){
+					lis[i].className = "odd";
+				}else {
+					lis[i].className = "even";
+				}
+			}
+		</script>
+		
+	</body>
+</html>

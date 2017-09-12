@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 2000px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			document.onclick = function(){
+				var event = event || window.event;
+				alert(event.type);
+				console.log("event.clientY:"+event.clientY);    //clientY :到当前页面顶部的距离
+				console.log("event.pageY:"+event.pageY);		//pageY ：到整个页面顶部的距离
+				console.log("event.screenY:"+event.screenY);	//screenY ：以屏幕为基准点
+				
+				
+			}
+		</script>
+		
+		
+	</body>
+</html>

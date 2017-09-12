@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#yy{
+				width: 600px;
+				height: 600px;
+				padding: 100px;
+				background-color: #006699;
+				position: relative;
+				margin-left: 50px;
+			}
+			#fa{
+				width: 500px;
+				height: 500px;
+				
+				margin: 100px;
+				padding: 10px;
+				position: relative;
+				background-color: #2286E2;
+				
+			}
+			
+			#son{
+				width: 240px;height: 240px; background-color: paleturquoise;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="yy">
+			yy
+			<div id="fa">
+				fa
+				<div id="son">
+					son
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var yy = document.getElementById("yy");
+			var son = document.getElementById("son");
+			
+			// * offsetLeft (最近的待遇定位盒子) 左边的位置若若祖先没有定位，则以body为参考
+			// * offsetLeft从父亲的padding开始算，border不算
+			// * 假如父亲没有定位，爷爷定位，则以爷爷为参考
+			// * 总结： 子盒子到定位父盒子边框到边框的距离
+			console.log(son.offsetLeft)
+		</script>
+	</body>
+</html>

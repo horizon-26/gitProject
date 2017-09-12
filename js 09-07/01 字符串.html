@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var str = "my name is alibaba";
+			var str2 = "what is you name";
+			
+			//字符串截取
+			var strEle1 = str.slice(3);
+			
+			console.log(strEle1);
+			
+			var strEle2 = str.slice(3,5); //从第3个开始，到第5个结束(不包含第五位)
+			console.log(strEle2);
+			
+			var strEle3 = str.slice(-2); //负号表示相反方向，2表示：截取的长度
+			console.log(strEle3);
+			
+			var strEle4 = str.substr(3); //一个参数时，与slice()作用相同
+			console.log(strEle4);
+			
+			var strEle5 = str.substr(3,5); //从位置3开始截取之后5个字符串
+			console.log(strEle5);
+			
+			
+			var strEle6 = str.substring(3,5); // 与slice一样
+			var strEle7 = str.substring(5,3); //与上一条结果相同，slice不可这样用
+			console.log("strEle6:",strEle6); 
+			console.log("strEle7:",strEle7);
+		</script>
+	</body>
+</html>

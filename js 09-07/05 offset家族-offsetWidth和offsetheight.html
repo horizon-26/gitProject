@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				padding: 20px;
+				
+				border: 1px solid #0282CE;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+			offset家族   offset自己
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			console.log(box.style.width)	// 只能获取行内式的width，并且结果带单位,计算较麻烦
+			
+			console.log(box.offsetWidth)  // 包含padding和margin、border在内，不包括单位
+			
+			console.log(box.offsetHeight)  // 包含padding和border在内，不包括单位  动态监测
+			
+		</script>
+	</body>
+</html>

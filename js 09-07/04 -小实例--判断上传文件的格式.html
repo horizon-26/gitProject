@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file" name= "" id="file" value="" />
+		<span id="">
+			
+		</span>
+		<script type="text/javascript">
+			//假定用户上传的是jpg或png格式,提示格式正确
+			//其他格式的 提示格式错误
+			
+			//	1.找到有关元素
+			var file = document.getElementById("file");
+			var span = document.getElementsByTagName("span")[0];
+			
+			//	2.方法 onchang  文件域改变或下拉菜单改变时 oninput
+			file.onchange = function(){
+				// 判断用户上传文件的格式
+				var fileName = this.value;
+				
+				//得到扩展名
+				
+				var index = fileName.lastIndexOf("."); //从后面开始找"."的位置，因为文件名可以包含有"."，，这样可以保证
+				var extname = fileName.slice(index+1);
+				
+				if(extname.toLowerCase() == "jpg" || extname.toLowerCase() == "png"){
+					span.innerHTML = "格式正确";
+				}else{
+					span.innerHTML = "格式不正确";
+				}
+			}
+			
+		</script>
+	</body>
+</html>

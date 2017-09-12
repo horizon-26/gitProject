@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>闹钟</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.clock {
+				width: 600px;
+				height: 600px;
+				margin: 60 auto;
+				background: url(img/clock.png);
+				position: relative;
+			}
+			
+			.clock div {
+				position: absolute;
+				left: 50%;
+				margin-left: -15px;
+			}
+			
+			.hour {
+				background: url(img/hour.png);
+			}
+			
+			.minute {
+				background: url(img/hour.png);
+			}
+			
+			.second {
+				background: url(img/hour.png);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="clock" id="clock">
+			<div class="hour"></div>
+			<div class="minute"></div>
+			<div class="second">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var clock = document.getElementById("clock");
+
+			setInterval(function() {
+				var date = new Date();
+				var h = date.getHours() % 12;
+				var m = date.getMinutes();
+				var s = date.getSeconds();
+
+				h = h + m / 60;
+				m = m +s/60;
+				s = s;
+				//一圈 360 12小时 每小时转30° 要考虑小数部分
+				clock.children[0].style.webkitTransform = "rotate(" + h * 30 + "deg)"
+
+				//一圈 360 60分钟 每分钟转6° 要考虑小数部分
+				clock.children[1].style.webkitTransform = "rotate(" + m * 6 + "deg)"
+
+				//一圈 360 60秒 每秒转6° 要考虑小数部分
+				clock.children[2].style.webkitTransform = "rotate(" + s * 6 + "deg)"
+
+			}, 1000)
+		</script>
+	</body>
+
+</html>

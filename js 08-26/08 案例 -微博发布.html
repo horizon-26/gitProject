@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>微博发布</title>
+		<style type="text/css">
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style: none;
+				margin-left: 44px;
+				width: 250px;
+			}
+			
+			.box {
+				width: 400px;
+				height: 400px;
+				padding: 30px 30px;
+				margin: 100px auto;
+				border: 1px solid #333;
+				overflow: hidden;
+			}
+			
+			input {
+				width: 250px;
+				height: 100px;
+			}
+			
+			span {
+				max-width: 250px;
+			}
+			
+			a {
+				float: right;
+			}
+			
+			li {
+				border-bottom: 1px dashed #ccc;
+				padding-bottom: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="box" class="box">
+			<label for="">微博发布：</label>
+			<input type="text" id="content" />
+			<button id="btnSend">发布</button>
+			<ul id="messages"></ul>
+		</div>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+			$("btnSend").onclick = function send() {
+				// 1、获取输入框的内容
+				var a = $("content").value;
+				//2 显示在li中
+				var m_html = '<li> ' +
+								'<span id="">' + a + ' </span> ' +
+								' <a href="javaScript:void;" id=" ">删除</a>' +
+					'		 </li> ';
+				$("messages").appendChildting(m_html);
+				
+				//3 删除当前输入框的内容
+				$("content").value = "";
+			}
+			var  aObj = document.getElementsByTagName("a"); 
+
+			function delicate() {
+
+			}
+		</script>
+	</body>
+
+</html>

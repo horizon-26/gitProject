@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var PI = 3.14159265358; //常量一般大写
+			
+			//	对PI保留两位小数
+			
+			PI = PI + ""; //先转换
+			var index = PI.indexOf(".");
+			console.log(PI.slice(0,index+3));
+			console.log(PI.substr(0,index+3));
+			
+			 PI = 3.14159265358; //常量一般大写
+			console.log(PI.toFixed(2)); // 使用toFixed()，必须为数字，不能为字符，2表示保留2位小数
+		</script>
+	</body>
+</html>
+ss

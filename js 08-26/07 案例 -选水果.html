@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			select {
+				width: 150px;
+				height: 200px;
+				background-color: #0000FF;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<select id="all" multiple="multiple">
+			<option value="">苹果</option>
+			<option value="">西瓜</option>
+			<option value="">香蕉</option>
+			<option value="">哈密瓜</option>
+
+		</select>
+		<input type="button" name="" id="btn1" value="》" />
+		<input type="button" name="" id="btn2" value="《" />
+		<input type="button" name="" id="btn3" value=">" />
+		<input type="button" name="" id="btn4" value="<" />
+
+		<select id="select" name="" size="4" multiple="multiple">
+
+		</select>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+			$("btn1").onclick = function() {
+				//左边所有的元素 全部右移
+				//1、 遍历左边所有的孩子
+				var lChilds = $("all").children;
+				for(var i = lChilds.length - 1; i >= 0; i--) {
+					$("select").appendChild(lChilds[i]);
+				}
+			}
+			$("btn2").onclick = function() {
+				//左边所有的元素 全部右移
+				//1、 遍历左边所有的孩子
+				var rChilds = $("select").children;
+				for(var i = rChilds.length - 1; i >= 0; i--) {
+					$("all").appendChild(rChilds[i]);
+				}
+
+			}
+			$("btn3").onclick = function() {
+				var lChilds = $("all").children;
+				for(var i = 0; i < lChilds.length; i++) {
+					if(lChilds[i].selected) {
+						$("select").appendChild(lChilds[i]);
+						i--;
+					}
+				}
+//				for(var i = lChilds.length; i >=0; i--) {
+//					if(lChilds[i].selected) {
+//						$("select").appendChild(lChilds[i]);
+//					}
+//
+//				}
+			}
+		</script>
+	</body>
+
+</html>

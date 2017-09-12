@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			img{
+				display: block;
+			}
+			li{
+				list-style: none;
+				float: left;
+			}
+			.box{
+				width: 225px;
+				height: 162px;
+				overflow: hidden;
+				margin: 30 auto;
+				position: relative;
+			}
+			ul{
+				width: 100%;
+				position: absolute;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="box">
+			<ul>
+				<!--div宽度是几张图片就补几张-->
+				
+				<li><img src="../../../../高级课/jq/admin/images/kozers/thumb/0.jpg"  alt="" /></li>
+				<li><img src="../../../../高级课/jq/admin/images/kozers/thumb/1.jpg" alt="" /></li>
+				<li><img src="../../../../高级课/jq/admin/images/kozers/thumb/2.jpg"  alt="" /></li>
+				<li><img src="../../../../高级课/jq/admin/images/kozers/thumb/3.jpg" alt="" /></li>
+				<li><img src="../../../../高级课/jq/admin/images/kozers/thumb/0.jpg"  alt="" /></li>
+				<li><img src="../../../../高级课/jq/admin/images/kozers/thumb/1.jpg" alt="" /></li>			
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var ul = document.getElementsByTagName("ul")[0];
+			var num = 0;
+			setInterval(function(){
+				num -= 3;
+				if(num <= -1200){
+					num = 0;
+				}
+				ul.style.left = num + "px";
+			},30)
+		</script>
+	</body>
+</html>

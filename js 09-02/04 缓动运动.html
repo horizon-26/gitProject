@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				background-color: #006699;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">开始</button>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			var timer = null;
+			
+			var leader = 0;		//初始值
+			var target = 500;	//最终的值
+			$("btn").onclick = function(){
+				var num = 0;//
+				setInterval(function(){
+					// leader	以先快后慢变化
+					//leader 0+50
+					//leader 50+(500-50)/10 = 50+45
+					//leader 50+45 +(500-95)/10 = 50+45+40.5
+					
+					// 固定公式
+					leader = leader + (target - leader) / 10;  
+					$("box").style.left = leader +	"px";
+				},30);
+			}
+		</script>
+	</body>
+</html>

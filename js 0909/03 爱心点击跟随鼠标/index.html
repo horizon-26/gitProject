@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 2000px;
+			}
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="aa.png" width="32" height="32"/>
+		<script type="text/javascript">
+			var img = document.getElementsByTagName("img")[0];
+			var leaderX = 0,targetX=0;
+			var leaderY = 0,targetY=0;
+			
+			setInterval(function(){
+				leaderX = leaderX + (targetX-leaderX) / 10
+				leaderY = leaderY + (targetY-leaderY) / 10
+				
+				img.style.left = leaderX + "px";
+				img.style.top = leaderY + "px";
+				
+			});
+			
+			document.onclick = function(event){
+				//	目标位置 水平 垂直位置
+				
+				var event = event || window.event;
+				targetX = event.pageX - img.offsetWidth / 2;
+				targetY = event.pageY - img.offsetHeight /2;
+			}
+		</script>
+	</body>
+</html>

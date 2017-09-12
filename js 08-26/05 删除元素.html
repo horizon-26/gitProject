@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除元素</title>
+	</head>
+	<body>
+		<div class="fa">
+			<p>大儿子</p>
+			<div id="">
+				二女儿
+			</div>
+		</div>
+		<script type="text/javascript">
+			var fa = document.getElementsByClassName("fa")[0];
+			var s1 = fa.children[0];
+			fa.removeChild(s1);
+			fa.removeChild()//报错
+			fa.innerHTML = ""//清空fa的所以内容
+		</script>
+	</body>
+</html>
